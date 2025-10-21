@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="estilos.css" />
+
+    <title>Developday</title>
+</head>
+<body>
+    <div id="inicio">
+        <h1>¡Bienvenido a Developday App!</h1>
+
+        <!-- <div class='console-container'>
+            <span id='text'></span>
+            <div class='console-underscore' id='console'>&#95;</div>
+        </div> -->
+
+        <div id=container>
+            ¡Aprende 
+            <div id=flip>
+                <div><div>Tecnología</div></div>
+                <div><div>Inglés</div></div>
+                <div><div>Todo</div></div>
+            </div>
+            asombrosamente!
+        </div>
+        
+        <p class="intro-text">Prepárate para un desafío divertido.</p>
+        <button id="startButton" class="button">Iniciar</button>
+    </div>
+    
+    <div id="quiz" class="hidden">
+        <div id="loading" class="loader"></div> 
+
+        <h2 id="question"></h2>
+        <p id="translateButton" class="hidden">Traducir</p>
+        <div id="loading-translation" class="loader-translation hidden"></div>
+        <p id="translation" class="hidden"></p>
+        <div id="options"></div>
+        <p id="message"></p>
+        <button id="nextButton" class="hidden">Siguiente</button>
+        <p id="error" class="hidden"></p>
+        <button id="acceptButton">Pasar a practicar inglés</button>
+    </div>
+
+    <div id="resumen" class="hidden">
+        <h2>Resumen del Quiz</h2>
+        <p id="scoreMessage"></p>
+        <button id="acceptButton">Aceptar</button>
+    </div>
+    
+    <div id="practica" class="hidden">
+        <h2>Ahora practiquemos nuestro inglés</h2>
+        <p id="newsText"></p>
+        <p id="newsContent"></p>
+        <button id="finishButton">Finalizar clase</button>
+    </div>
+    
+    <div id="final" class="hidden">
+
+        <h2>Frase final</h2>
+        <p id="translateQuote">Traducir</p>
+        <div id="loading-translation-quote" class="loader-translation hidden"></div>
+        <p id="translation-quote" class="hidden"></p>
+
+        <div id="loading-quote" class="loader"></div> 
+
+        <div class='console-container'>
+            <div class='console-underscore' id='quoteText'>&#95;</div>
+            <p id='author'></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Dveloped by Príncipe Vásquez 2025</p>
+    </footer>
+
+    <script src="./javascript.js"></script>
+</body>
+</html>

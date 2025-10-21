@@ -1,0 +1,302 @@
+body {
+    font-family: "Share Tech Mono", monospace;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #0a0908;
+    /* background: linear-gradient(45deg,rgba(75, 108, 183, 1) 0%, rgba(0, 0, 0, 1) 100%); */
+    color: #00ff2b;
+    /* height: 100dvh; */
+}
+
+.intro-text {
+  margin-bottom: 3rem;
+}
+
+#translateButton {
+  text-decoration: underline;
+}
+
+#translateButton:hover {
+  cursor: pointer;
+}
+
+#translateQuote {
+  text-decoration: underline;
+}
+
+#translateQuote:hover {
+  cursor: pointer;
+}
+        
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/************************ LOADER PREGUNTA ************************/
+
+/* HTML: <div class="loader"></div> */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  white-space: pre;
+  font-size: 30px;
+}
+.loader:before {
+  content: "Loading...";
+  animation: l34 1s infinite alternate;
+}
+
+@keyframes l34{
+  0%,15%,75%,100% {
+   content:"Loading...";
+  }
+  20% {content:"Loading..."}
+  25% {content:"Lo ding..."}
+  30% {content:"Load ng..."}
+  35% {content:" oading..."}
+  40% {content:"L ading..."}
+  45% {content:"Loadin ..."}
+  50% {content:"Loa ing..."}
+  55% {content:"Loading  ."}
+  60% {content:" oa ing..."}
+  65% {content:"L ading..."}
+  70% {content:"Load n ..."}
+}
+
+/************************ LOADER TRADUCIR ************************/
+
+/* HTML: <div class="loader-translation"></div> */
+.loader-translation {
+  margin: 0 auto;
+  width: 100px;
+  height: 5px;
+  /* border-radius: 40px; */
+  color: #36ba01;
+  border: 2px solid;
+  position: relative;
+}
+.loader-translation::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  width: 25%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+    50% {left:100%;transform: translateX(calc(-100% - 4px))}
+}
+
+/* #inicio, #quiz, #resumen, #practica, #final { */
+#quiz, #resumen, #practica, #final {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#options {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+        
+/* button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #6096ba;
+    color: white;
+    border: none;
+    border-radius: 10px;
+} */
+
+/* CSS */
+button {
+  /* margin-top: 2rem; */
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #36ba01;
+  box-sizing: border-box;
+  color: #36ba01;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:focus {
+  color: #171e29;
+}
+
+button:hover {
+  border-color: #00ff2b;
+  color: #00ff2b;
+  fill: #00ff2b;
+}
+
+button:active {
+  border-color: #00ff2b;
+  color: #00ff2b;
+  fill: #00ff2b;
+}
+
+@media (min-width: 768px) {
+  .button-59 {
+    min-width: 170px;
+  }
+}
+
+button.incorrect {
+    background-color: #f44336; /* Rojo para incorrectas */
+    color: #fff;
+}
+        
+button.correct {
+    background-color: #4CAF50; /* Verde para correctas */
+    color: #fff;
+}
+        
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#message {
+    font-size: 16px;
+    color: #00ff2b;
+    margin: 20px 0;
+}
+        
+#error {
+    color: red;
+    margin: 20px 0;
+}
+
+footer {
+  font-size: 12px;
+  margin-top: 1.5rem;
+}
+
+/************************ ANIMACIÓN BANNER INICIO ************************/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+#container {
+  color:#fff;
+  /* text-transform: uppercase; */
+  font-size:36px;
+  font-weight:bold;
+  /* padding-top:200px;   */
+  /* position:fixed; */
+  width:100%;
+  /* bottom:45%; */
+  /* display:block; */
+  margin: 5rem 0 5rem 0;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#cce3de;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+/************************ EFECTO MAQUINA DE ESCRIBIR ************************/
+
+.hidden {
+  opacity:0;
+}
+.console-container {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1em;
+  text-align: center;
+  color: #fff;
+  margin-top: 1.5rem;
+}
+.console-underscore {
+  text-align: center;
+}
+
+#author {
+  color: #00ff2b;
+  text-align: end;
+}
+
+/************************ MEDIAQUERY ************************/
+
+@media (max-width: 1250px) {
+  #startButton {
+    width: 100%;
+  }
+
+  #options {
+    flex-direction: column;
+  }
+
+  button {
+    margin-top: 0;
+  }
+}
