@@ -211,6 +211,24 @@ document.getElementById('acceptButton').onclick = async () => {
         document.getElementById('newsText').textContent = 'Error al cargar el artículo.';
     }
 };
+
+// Botón Aceptar en resumen despues del Quiz
+document.getElementById('acceptButtonQuiz').onclick = async () => {
+    showView('practica');
+    try {
+        const response = await fetch('https://newsapi.org/v2/top-headlines?category=technology&apiKey=3dffb2ae36ff4960a7bf05d5e352639e&pageSize=1');
+        const data = await response.json();
+        console.log('data: ', data);
+        if (data.articles && data.articles.length > 0) {
+            document.getElementById('newsText').textContent = data.articles[0].title + ': ' + data.articles[0].description;
+            document.getElementById('newsContent').textContent = data.articles[0].content;
+        } else {
+            document.getElementById('newsText').textContent = 'No se pudo obtener un artículo.';
+        }
+    } catch (error) {
+        document.getElementById('newsText').textContent = 'Error al cargar el artículo.';
+    }
+};
         
 // Botón Finalizar clase
 document.getElementById('finishButton').onclick = async () => {

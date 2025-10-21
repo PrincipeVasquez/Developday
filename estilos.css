@@ -204,6 +204,10 @@ button.correct {
     margin: 20px 0;
 }
 
+#acceptButton {
+  margin-top: 2rem;
+}
+
 footer {
   font-size: 12px;
   margin-top: 1.5rem;
